@@ -154,13 +154,7 @@ class YoloLoss(nn.Module):
         ### CODE ###
 
         # https://stats.stackexchange.com/questions/287486/yolo-loss-function-explanation
-
-        # calculate the loss for each bonding box
-        # for i in range(self.B):
-        #     pred_boxes = pred_boxes_list[i]
-        #     total_loss += torch.sum((pred_boxes[:, :, :, -1][~has_object_map] ** 2))
-        # return self.l_noobj * total_loss
-
+        
         total_loss = 0
 
         # hint 1: compute loss for all predictions in the pred_boxes_list list
